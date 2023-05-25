@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -f arq-01 ]; then
+	echo "O arquivo arq-01 já existe em /tmp"
+else
+	echo "O arquivo arq-01 não existe em /tmp, vamos criá-lo agora"
+	sleep 5
+	touch /tmp/arq-01
+	echo "Arquivo /tmp/arq-01 criado com sucesso!"
+fi	
