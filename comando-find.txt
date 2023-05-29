@@ -1,0 +1,18 @@
+find [caminho] [opções] [expressão]
+
+Aqui estão alguns dos argumentos e opções mais comuns utilizados com o comando find no Linux:
+
+[caminho]: Especifica o diretório ou caminho a partir do qual a busca será iniciada. Se nenhum caminho for fornecido, o diretório atual será usado como padrão.
+
+[opções]:
+
+    -name padrão: Faz uma busca por arquivos com um nome específico ou padrão de nome.
+    -type tipo: Filtra por tipo de arquivo, como f para arquivos regulares, d para diretórios, l para links simbólicos, etc.
+    -size n[c]: Filtra por tamanho de arquivo, onde n é o tamanho desejado e c é um caractere opcional que representa a unidade de medida (c para bytes, k para kilobytes, M para megabytes, G para gigabytes, etc.).
+    -mtime n: Filtra por data de modificação, onde n é o número de dias desde a última modificação do arquivo.
+    -user nome: Filtra por nome de usuário do proprietário do arquivo.
+    -group nome: Filtra por nome do grupo proprietário do arquivo.
+    -perm permissões: Filtra por permissões de arquivo específicas.
+    -exec comando {} +: Executa um comando em cada arquivo correspondente encontrado.
+
+[expressão]: Define a expressão ou critérios adicionais para a busca, como expressões lógicas, operadores de comparação ou outras opções específicas do find.
