@@ -1,6 +1,0 @@
-Onde procurar ajuda no Linux?
-
-    man - As tão famosas man pages, mostra o manual de um comando específico.
-    help - Mostra informações de ajuda para um comando específico no próprio terminal.
-    apropos - Pesquisa por comandos relacionados a uma palavra-chave.
-    whatis - Fornece uma breve descrição do que um comando específico faz.
