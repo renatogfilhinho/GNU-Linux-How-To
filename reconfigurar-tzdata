@@ -1,0 +1,7 @@
+#
+# Para reconfigurar o tzdata no Debian
+#
+dpkg-reconfigure tzdata
+#
+# Após basta selecionar as opções de acordo com seu time zone
+#
