@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#
+# Este script mostra, com exemplos, de como usar os comandos "for, while, until e case" \n
+# 
+#
+
+echo "Escolha um exemplo:"
+echo "1. Exemplo usando o comando 'for'"
+echo "2. Exemplo usando o comando 'while'"
+echo "3. Exemplo usando o comando 'until'"
+read -p "Digite o número do exemplo: " choice
+
+case $choice in
+    1)
+        echo "Exemplo usando o comando 'for':"
+        var=0
+        for ((i=0; i<=2000; i++)); do
+            var=$((var+1))
+        done
+        echo "O valor final de var é: $var"
+        ;;
+    2)
+        echo "Exemplo usando o comando 'while':"
+        var=0
+        i=0
+        while [ $i -le 2000 ]; do
+            var=$((var+1))
+            i=$((i+1))
+        done
+        echo "O valor final de var é: $var"
+        ;;
+    3)
+        echo "Exemplo usando o comando 'until':"
+        var=0
+        i=0
+        until [ $i -gt 2000 ]; do
+            var=$((var+1))
+            i=$((i+1))
+        done
+        echo "O valor final de var é: $var"
+        ;;
+    *)
+        echo "Opção inválida."
+        ;;
+esac
