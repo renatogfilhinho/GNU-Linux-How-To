@@ -16,3 +16,9 @@ Aqui estão alguns dos argumentos e opções mais comuns utilizados com o comand
     -exec comando {} +: Executa um comando em cada arquivo correspondente encontrado.
 
 [expressão]: Define a expressão ou critérios adicionais para a busca, como expressões lógicas, operadores de comparação ou outras opções específicas do find.
+
+------------------------------------------------------------
+
+## Exemplo do comando find usando para encontrar arquivos com a extensão gz e maiores que 100k
+
+find /var/log/ -iname *.gz* -size +100k -exec ls -lh {} ;
