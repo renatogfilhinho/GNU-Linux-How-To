@@ -1,0 +1,7 @@
+Comando para incluir um usuário ao sudo
+
+usermod -aG <grupo> <usuário>
+
+Exemplo:
+
+# usermod -aG sudo fulano
