@@ -1,0 +1,16 @@
+Pequeno tutorial para conexão via RDP ao Linux
+
+Para se conectar via RDP a um computador com Linux, precisamos, claro que o computador
+tenha o sistema X instalado.
+
+O primeiro passo é instalar o pacote xrdp
+
+# apt install xrdp
+
+Feito isso, verifique se o serviço está ativo
+
+# systemctl status xrdp
+
+Após, na estação execute o rdesktop ou Remmina (caso Linux) ou Remote Desktop Connection (Windows)
+
+É isso.
