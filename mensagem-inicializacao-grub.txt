@@ -1,0 +1,28 @@
+Este documento explica como o usuário pode configurar o arquivo
+/etc/default/grub para que, na inicializacao, visualize todas as
+mensagens de inicializacao.
+
+Procure pelo parametro: GRUB_CMDLINE_LINUX_DEFAULT
+
+Após, comente a linha:
+
+#GRUB_CMDLINE_LINUX_DEFAULT
+
+Atualize o GRUB para que as alterações entrem em vigor:
+
+update-grub
+
+Abaixo a explicação de cada uma das opções:
+
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+
+quiet - Esta opção diz ao kernel para não produzir qualquer ou nenhuma saída (modo não verboso). Se você bootar
+sem essa opção, você verá muitas mensagens do kernel, como ativações de drivers/módulos, verificações e erros do sistema de arquivos. Não ter o parâmetro quiet pode ser útil quando você precisa encontrar um erro.
+
+splash - Esta opção é usada para iniciar uma tela de "carregamento" atraente enquanto todas as partes principais do sistema são carregadas em segundo plano. Se você desativá-lo e ativar silenciosamente, obterá uma tela em branco.
+
+nomodeset - Informa ao kernel para não iniciar os drivers de vídeo até que o sistema esteja funcionando. 
+
+3 - Inicia o sistema no nível de execução 3 (o padrão é 5). Se você anexar esse parâmetro, será descartado em um ambiente de linha de comando (o nível de execução 5 é necessário para uma GUI). 
+
+init - Indica a localização do script "init". Este script é o primeiro processo iniciado em um sistema do tipo Unix e é responsável por iniciar todos os outros processos. Sintaxe: init=/caminho/para/script
