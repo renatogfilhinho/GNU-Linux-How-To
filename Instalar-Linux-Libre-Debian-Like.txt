@@ -1,0 +1,56 @@
+##### Tutorial para instalar o Linux-Libre em distribuições Debian e derivados #####
+##### Realize os procedimentos como root (cuidado!) ou use o sudo.
+Verificar se o pacote apt-transport-https está instalado:
+
+$ sudo dpkg -l | grep apt-transport-https
+
+Caso não, instalar:
+
+$ sudo apt install apt-transport-https
+
+Após, edite o arquivo /etc/apt/sources.list ou crie o arquivo /etc/apt/sources.list.d/linux-libre.list e
+inclua a seguinte linha:
+
+deb https://linux-libre.fsfla.org/pub/linux-libre/freesh/ freesh main
+
+Salve e saia
+
+Em seguida baixe a chave GPG do repositório do jxself
+
+sudo wget https://jxself.org/gpg.inc
+
+Neste momento precisamos verificar se a chave é a correta, anote pelo repositório o valor
+da chave publica:
+
+sudo gpg --keyid-format long --with-fingerprint gpg.inc
+
+A saíde deve ser igual ao valor Key fingerprint = "F611 A908 FFA1 65C6 9958 4ED4 9D0D B31B 545A 3198"
+
+Em sendo, adicione a chave e apague:
+
+sudo apt-key add < gpg.inc ; sudo rm gpg.inc
+
+Atualize a base de pacotes:
+
+sudo apt update
+
+Se você receber uma mensagem de warning sobre a chave, não se preocupe, apenas siga o passo abaixo:
+
+sudo apt-key list (Anote os ultimos 8 digitos da chave)
+
+sudo apt-key export <ultimos-8-digitos-da-chave> | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/linux-libre.gpg
+
+Feito isso basta instalar o Linux-Libre
+
+sudo apt install linux-libre
+
+
+Aproveite!!!
+
+
+
+
+
+
+
+
