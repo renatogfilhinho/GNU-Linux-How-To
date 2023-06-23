@@ -1,4 +1,8 @@
 ##### Tutorial para instalar o Linux-Libre em distribuições Debian e derivados #####
+
+###### Créditos: Professor Paulo Kretcheu ######
+###### https://salsa.debian.org/kretcheu/tutoriais/-/blob/master/Linux-Libre.md ######
+
 ##### Realize os procedimentos como root (cuidado!) ou use o sudo.
 Verificar se o pacote apt-transport-https está instalado:
 
