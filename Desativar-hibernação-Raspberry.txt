@@ -1,0 +1,22 @@
+Para desativar a hibernação no Raspberry edite o seguinte arquivo:
+
+sudo nano /etc/lightdm/lightdm.conf
+
+Inclua as seguintes linhas:
+
+[SeatDefaults]
+xserver-command=X -s 0 -dpms
+
+Salve e saia
+
+Uma outra forma é executando o seguintes comandos:
+
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+sudo systemctl restart systemd-logind.service
+
+Para desfazer:
+
+sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
+sudo systemctl restart systemd-logind.service
+
+
